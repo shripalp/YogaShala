@@ -1,15 +1,17 @@
+/* eslint-disable no-undef */
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAkNBtdTBI7mPLkfSD2yHzwXcln3xQ67JQ",
-  authDomain: "express-rest-api-276b6.firebaseapp.com",
-  projectId: "express-rest-api-276b6",
-  storageBucket: "express-rest-api-276b6.appspot.com",
-  messagingSenderId: "457377889275",
-  appId: "1:457377889275:web:bc569cf2c94350ebd3e95e",
-  measurementId: "G-TTL36YS7Z3",
+  // eslint-disable-next-line no-undef
+  apiKey: import.meta.env.VITE_APP_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
