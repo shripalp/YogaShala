@@ -26,16 +26,20 @@ function HeroSection() {
     fetchEventData();
   }, []);
   return (
-    <div className="flex flex-row">
+    <div className="mx-auto">
       <div className="text-center text-slate-600 p-4">
         <h1 className="text-4xl font-bold mb-2">Welcome to Our YogaShala</h1>
         <div>
-          <h1>Our Schedule</h1>
-          <ul className="flex flex-wrap m-4 p-4">
+          <h1 className="text-2xl font-bold mb-2">Our Schedule</h1>
+          <ul className="flex flex-wrap gap-10 p-4 mx-auto justify-center">
             {events.map((event) => (
               <li key={event.id}>
-                <EventCard name={event.eventName} />
-                {event.eventSchedule}
+                <EventCard
+                  eventname={event.eventName}
+                  description={event.eventDescription}
+                  schedule={event.eventSchedule}
+                  location={event.eventLocation}
+                />
               </li>
             ))}
           </ul>

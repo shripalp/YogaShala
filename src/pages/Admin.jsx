@@ -24,10 +24,13 @@ const Admin = () => {
 
   return (
     <div>
-      <Navbar />
-      <Authentication />
-
-      {user ? <EventForm /> : ""}
+      <header>
+        <Navbar />
+      </header>
+      <section id="auth">
+        <Authentication />
+      </section>
+      <section id="event_form">{user ? <EventForm /> : ""}</section>
     </div>
   );
 };

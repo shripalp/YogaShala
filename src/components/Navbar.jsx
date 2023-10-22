@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="bg-blue-500 p-6 w-full">
       <div className="container mx-auto flex justify-between items-center">
         <a href="/" className="text-white text-2xl font-bold">
-          YogaShala
+          🧘🏼 YogaShala
         </a>
 
         <div className="md:hidden">

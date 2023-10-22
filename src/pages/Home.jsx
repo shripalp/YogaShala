@@ -5,8 +5,12 @@ import Navbar from "../components/Navbar";
 const Home = () => {
   return (
     <div>
-      <Navbar />
-      <HeroSection />
+      <header>
+        <Navbar />
+      </header>
+      <section id="hero">
+        <HeroSection />
+      </section>
     </div>
   );
 };
