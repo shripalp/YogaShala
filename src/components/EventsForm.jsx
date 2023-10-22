@@ -110,7 +110,7 @@ function EventForm() {
         </button>
       </form>
       {isSubmitted && (
-        <div className="text-white text-2xl">
+        <div className="text-2xl text-slate-600">
           Form submitted successfully! This message will disappear in 5 seconds.
         </div>
       )}
