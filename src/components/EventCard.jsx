@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 function EventCard(props) {
   const [user, setUser] = useState(null);
+
   const auth = getAuth();
 
   useEffect(() => {
@@ -26,6 +27,7 @@ function EventCard(props) {
   const handleDelete = async (e) => {
     try {
       await deleteDoc(doc(db, `events/${props.id}`));
+      window.location.reload();
       console.log("Document successfully deleted!");
     } catch (error) {
       console.error("Error deleting document: ", error);
