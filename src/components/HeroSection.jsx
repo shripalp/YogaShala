@@ -25,6 +25,7 @@ function HeroSection() {
     }
     fetchEventData();
   }, []);
+
   return (
     <div className="mx-auto">
       <div className="text-center text-slate-600 p-4">
@@ -39,6 +40,7 @@ function HeroSection() {
                   description={event.eventDescription}
                   schedule={event.eventSchedule}
                   location={event.eventLocation}
+                  id={event.id}
                 />
               </li>
             ))}

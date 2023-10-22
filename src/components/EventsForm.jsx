@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { db } from "../utilities/firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 function EventForm() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     eventName: "",
     eventDate: "",
@@ -39,6 +41,7 @@ function EventForm() {
       eventLocation: "",
       eventDescription: "",
     });
+    navigate("/");
   };
 
   return (

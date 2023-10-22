@@ -2,7 +2,6 @@ import Authentication from "../components/Authentication";
 import EventForm from "../components/EventsForm";
 import Navbar from "../components/Navbar";
 import { getAuth } from "firebase/auth";
-
 import { useEffect, useState } from "react";
 
 const Admin = () => {
