@@ -40,6 +40,7 @@ function HeroSection() {
                   description={event.eventDescription}
                   schedule={event.eventSchedule}
                   location={event.eventLocation}
+                  url={event.eventUrl}
                   id={event.id}
                 />
               </li>

@@ -40,6 +40,7 @@ function EventForm() {
       eventName: "",
       eventLocation: "",
       eventDescription: "",
+      eventUrl: "",
     });
     navigate("/");
   };
@@ -91,6 +92,21 @@ function EventForm() {
             className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
+        <div>
+          <label htmlFor="eventUrl" className="block font-medium ">
+            Image Url:
+          </label>
+          <input
+            placeholder="type event location here"
+            type="url"
+            id="eventUrl"
+            name="eventUrl"
+            value={formData.eventUrl}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+          />
+        </div>
+        
         <div>
           <label htmlFor="eventDescription" className="block font-medium ">
             Event Description:
