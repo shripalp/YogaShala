@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import yoga from "../assets/astangayoga.jpg";
+//import yoga from "../assets/astangayoga.jpg";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../utilities/firebase";
 import { getAuth } from "firebase/auth";
@@ -24,7 +24,7 @@ function EventCard(props) {
     return () => unsubscribe(); // Unsubscribe from the listener when the component unmounts.
   }, []);
 
-  const handleDelete = async (e) => {
+  const handleDelete = async () => {
     try {
       await deleteDoc(doc(db, `events/${props.id}`));
       window.location.reload();
