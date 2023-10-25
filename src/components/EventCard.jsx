@@ -36,23 +36,31 @@ function EventCard(props) {
 
   return (
     <div>
-      <div className="max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={props.url} alt="Image" />
+      <div className="h-64 w-96 rounded overflow-auto shadow-lg">
+        <img
+          className=" object-contain h-24 w-48 mx-auto"
+          src={props.url}
+          alt="Image"
+        />
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{props.eventname}</div>
           <p className="text-gray-700 text-base">{props.description}</p>
         </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+        <div className="px-4 pt-2 pb-2">
+          <span className="bg-gray-200 inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2">
             {props.location}
           </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          <span className="bg-gray-200 inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2">
             {props.schedule}
           </span>
         </div>
         {user ? (
-          <div className="p-4">
-            <button type="submit" onClick={handleDelete}>
+          <div className="p-2">
+            <button
+              className="text-lg font-semibold rounded-full bg-orange-300 px-4"
+              type="submit"
+              onClick={handleDelete}
+            >
               Delete
             </button>
           </div>
