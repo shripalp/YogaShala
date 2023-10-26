@@ -44,7 +44,7 @@ const Navbar = () => {
             <ul className="py-2" aria-labelledby="user-menu-button">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                 >
                   Dashboard
@@ -52,22 +52,6 @@ const Navbar = () => {
               </li>
               <li>
                 <Authentication />
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >
-                  Earnings
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >
-                  Sign out
-                </a>
               </li>
             </ul>
           </div>
@@ -100,7 +84,7 @@ const Navbar = () => {
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-user"
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 float-right">
             <li>
               <a
                 href="/"

@@ -71,39 +71,6 @@ function Authentication() {
 
   return (
     <div className="container mx-auto p-4 text-slate-600">
-      <h2 className="text-white font-bold text-2xl">Authentication</h2>
-      <div>
-        <label htmlFor="email" className="block font-medium">
-          E-mail:
-        </label>
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full md:w-1/4 px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="password" className="block font-medium ">
-          Password:
-        </label>
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full md:w-1/4  px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      {error ? <div className="text-red text-xl">{error}</div> : ""}
-
-      <button
-        className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
-        onClick={handleRegistration}
-      >
-        Register
-      </button>
       {user ? (
         <button
           className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
@@ -112,12 +79,45 @@ function Authentication() {
           Logout
         </button>
       ) : (
-        <button
-          className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
-          onClick={handleLogin}
-        >
-          Login
-        </button>
+        <div>
+          <div>
+            <label htmlFor="email" className="block font-medium">
+              E-mail:
+            </label>
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full md:w-1/4 px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div>
+            <label htmlFor="password" className="block font-medium ">
+              Password:
+            </label>
+            <input
+              type="password"
+              placeholder="Password"
+              className="w-full md:w-1/4  px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
+              onClick={handleLogin}
+            >
+              Login
+            </button>{" "}
+            <button
+              className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
+              onClick={handleRegistration}
+            >
+              Register
+            </button>
+          </div>
+          {error ? <div className="text-red text-xl">{error}</div> : ""}
+        </div>
       )}
 
       {user ? (
