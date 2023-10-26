@@ -7,16 +7,14 @@ import {
   signOut,
 } from "firebase/auth";
 
-const auth = getAuth();
-
 //import { NavLink, useNavigate } from "react-router-dom";
 
 function Authentication() {
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [error, setError] = useState(null);
+  const auth = getAuth();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
