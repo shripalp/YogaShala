@@ -7,9 +7,11 @@ import { useEffect, useState } from "react";
 
 function EventCard(props) {
   const [user, setUser] = useState(null);
-  const [register, setRegister] = useState(false);
 
   const auth = getAuth();
+
+  const url =
+    "https://docs.google.com/forms/d/e/1FAIpQLSfXC0OVtqxuxa0bSX0MvW1F8sCFHgSezu_wJvir5K12rUJ4dQ/viewform?usp=sf_link";
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -34,9 +36,6 @@ function EventCard(props) {
       console.error("Error deleting document: ", error);
     }
   };
-  const handleRegister = () => {
-    setRegister(true);
-  };
 
   return (
     <div>
@@ -59,26 +58,12 @@ function EventCard(props) {
           <button
             className="text-lg font-semibold rounded-full bg-orange-300 px-4"
             type="submit"
-            onClick={handleRegister}
+            onClick={() => window.open(url, "_blank")}
           >
             Register
           </button>
         </div>
       </div>
-      {register ? (
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdm6Q6PM-1mLLqN-qsL05tHF5Z47G2f8cqrBXYI_HU238mxlA/viewform?embedded=true"
-          width="640"
-          height="658"
-          frameBorder="0"
-          marginHeight="0"
-          marginWidth="0"
-        >
-          Loading…
-        </iframe>
-      ) : (
-        ""
-      )}
 
       {user ? (
         <div className="p-2">
