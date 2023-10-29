@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 function EventCard(props) {
   const [user, setUser] = useState(null);
+  const [register, setRegister] = useState(false);
 
   const auth = getAuth();
 
@@ -33,41 +34,65 @@ function EventCard(props) {
       console.error("Error deleting document: ", error);
     }
   };
+  const handleRegister = () => {
+    setRegister(true);
+  };
 
   return (
     <div>
-      <div className="h-64 w-96 rounded overflow-auto shadow-lg">
-        <img
-          className=" object-contain h-24 w-48 mx-auto"
-          src={props.url}
-          alt="Image"
-        />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{props.eventname}</div>
-          <p className="text-gray-700 text-base">{props.description}</p>
-        </div>
-        <div className="px-4 pt-2 pb-2">
-          <span className="bg-gray-200 inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2">
+      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+          <img className="rounded-t-lg" src={props.url} alt="" />
+        </a>
+        <div className="p-5">
+          <a href="#">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {props.eventname}
+            </h5>
+          </a>
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {props.location}
-          </span>
-          <span className="bg-gray-200 inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2">
-            {props.schedule}
-          </span>
+          </p>
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            {props.description}
+          </p>
+          <button
+            className="text-lg font-semibold rounded-full bg-orange-300 px-4"
+            type="submit"
+            onClick={handleRegister}
+          >
+            Register
+          </button>
         </div>
-        {user ? (
-          <div className="p-2">
-            <button
-              className="text-lg font-semibold rounded-full bg-orange-300 px-4"
-              type="submit"
-              onClick={handleDelete}
-            >
-              Delete
-            </button>
-          </div>
-        ) : (
-          ""
-        )}
       </div>
+      {register ? (
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdm6Q6PM-1mLLqN-qsL05tHF5Z47G2f8cqrBXYI_HU238mxlA/viewform?embedded=true"
+          width="640"
+          height="658"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+        >
+          Loading…
+        </iframe>
+      ) : (
+        ""
+      )}
+
+      {user ? (
+        <div className="p-2">
+          <button
+            className="text-lg font-semibold rounded-full bg-orange-300 px-4"
+            type="submit"
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

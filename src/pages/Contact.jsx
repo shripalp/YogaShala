@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div>
       <Navbar />
-      Admin Page
+      Contact Us
     </div>
   );
 };
