@@ -40,7 +40,8 @@ function HeroSection() {
                   description={event.eventDescription}
                   schedule={event.eventSchedule}
                   location={event.eventLocation}
-                  url={event.eventUrl}
+                  imageLink={event.eventImageLink}
+                  registrationLink={event.eventRegistrationLink}
                   id={event.id}
                 />
               </li>

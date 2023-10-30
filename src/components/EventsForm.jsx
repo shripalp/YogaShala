@@ -40,7 +40,8 @@ function EventForm() {
       eventName: "",
       eventLocation: "",
       eventDescription: "",
-      eventUrl: "",
+      eventImageLink: "",
+      eventRegistrationLink: "",
     });
     navigate("/");
   };
@@ -66,12 +67,13 @@ function EventForm() {
           />
         </div>
         <div>
-          <label htmlFor="eventDate" className="block font-medium">
+          <label htmlFor="eventSchedule" className="block font-medium">
             Event Schedule:
           </label>
           <input
             type="text"
             id="eventSchedule"
+            placeholder="type event schedule here"
             name="eventSchedule"
             value={formData.eventSchedule}
             onChange={handleChange}
@@ -93,15 +95,29 @@ function EventForm() {
           />
         </div>
         <div>
-          <label htmlFor="eventUrl" className="block font-medium ">
-            Image Url:
+          <label htmlFor="eventImageLink" className="block font-medium ">
+            Image Link:
+          </label>
+          <input
+            placeholder="type event url here"
+            type="url"
+            id="eventImageLink"
+            name="eventImageLink"
+            value={formData.eventImageLink}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+          />
+        </div>
+        <div>
+          <label htmlFor="eventRegistrationLink" className="block font-medium ">
+            Registration Link:
           </label>
           <input
             placeholder="type event location here"
             type="url"
-            id="eventUrl"
-            name="eventUrl"
-            value={formData.eventUrl}
+            id="eventRegistrationLink"
+            name="eventRegistrationLink"
+            value={formData.eventRegistrationLink}
             onChange={handleChange}
             className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
           />

@@ -10,9 +10,6 @@ function EventCard(props) {
 
   const auth = getAuth();
 
-  const url =
-    "https://docs.google.com/forms/d/e/1FAIpQLSfXC0OVtqxuxa0bSX0MvW1F8sCFHgSezu_wJvir5K12rUJ4dQ/viewform?usp=sf_link";
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -41,7 +38,7 @@ function EventCard(props) {
     <div>
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <img className="rounded-t-lg" src={props.url} alt="" />
+          <img className="rounded-t-lg" src={props.imageLink} alt="" />
         </a>
         <div className="p-5">
           <a href="#">
@@ -58,7 +55,7 @@ function EventCard(props) {
           <button
             className="text-lg font-semibold rounded-full bg-green-400 px-4"
             type="submit"
-            onClick={() => window.open(url, "_blank")}
+            onClick={() => window.open(props.registrationLink, "_blank")}
           >
             Register
           </button>
