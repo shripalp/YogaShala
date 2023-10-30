@@ -27,11 +27,11 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="mx-auto">
+    <div className="mx-auto m-16">
       <div className="text-center text-slate-600 p-4">
-        <h1 className="text-4xl font-bold mb-2">Welcome to Our YogaShala</h1>
+        <h1 className="text-4xl font-bold mb-6">Welcome to YogaShala</h1>
         <div>
-          <h1 className="text-2xl font-bold mb-4">Schedule</h1>
+          <h1 className="text-2xl font-bold mb-6">Our Schedule</h1>
           <ul className="flex flex-wrap gap-10 p-4 mx-auto justify-center">
             {events.map((event) => (
               <li key={event.id}>
