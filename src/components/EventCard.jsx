@@ -56,7 +56,7 @@ function EventCard(props) {
             {props.description}
           </p>
           <button
-            className="text-lg font-semibold rounded-full bg-orange-300 px-4"
+            className="text-lg font-semibold rounded-full bg-green-400 px-4"
             type="submit"
             onClick={() => window.open(url, "_blank")}
           >

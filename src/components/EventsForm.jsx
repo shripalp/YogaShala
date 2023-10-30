@@ -46,7 +46,7 @@ function EventForm() {
   };
 
   return (
-    <div className="container mx-auto text-slate-600 p-4">
+    <div className="w-full md:w-1/2 container mx-auto text-slate-600 p-4">
       <h2 className="text-2xl font-bold marker:font-bold mb-4">
         Event Announcement
       </h2>
@@ -106,7 +106,7 @@ function EventForm() {
             className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
-        
+
         <div>
           <label htmlFor="eventDescription" className="block font-medium ">
             Event Description:

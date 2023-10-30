@@ -79,7 +79,7 @@ function Authentication() {
           Logout
         </button>
       ) : (
-        <div>
+        <div className="flex flex-col">
           <div>
             <label htmlFor="email" className="block font-medium">
               E-mail:
@@ -87,7 +87,7 @@ function Authentication() {
             <input
               type="email"
               placeholder="Email"
-              className="w-full md:w-1/4 px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+              className="w-full md:w-3/4 px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -99,22 +99,24 @@ function Authentication() {
             <input
               type="password"
               placeholder="Password"
-              className="w-full md:w-1/4  px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+              className="w-full md:w-3/4 px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button
-              className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
-              onClick={handleLogin}
-            >
-              Login
-            </button>{" "}
-            <button
-              className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
-              onClick={handleRegistration}
-            >
-              Register
-            </button>
+            <div>
+              <button
+                className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
+                onClick={handleLogin}
+              >
+                Login
+              </button>{" "}
+              <button
+                className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
+                onClick={handleRegistration}
+              >
+                Register
+              </button>
+            </div>
           </div>
           {error ? <div className="text-red text-xl">{error}</div> : ""}
         </div>
