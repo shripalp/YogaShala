@@ -27,29 +27,32 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="mx-auto m-16">
-      <div className="text-center text-slate-600 p-4">
-        <h1 className="text-4xl font-bold mb-6">Welcome to YogaShala</h1>
-        <div>
-          <h1 className="text-2xl font-bold mb-6">Our Schedule</h1>
-          <ul className="flex flex-wrap gap-10 p-4 mx-auto justify-center">
-            {events.map((event) => (
-              <li key={event.id}>
-                <EventCard
-                  eventname={event.eventName}
-                  description={event.eventDescription}
-                  schedule={event.eventSchedule}
-                  location={event.eventLocation}
-                  imageLink={event.eventImageLink}
-                  registrationLink={event.eventRegistrationLink}
-                  id={event.id}
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div
+      className="text-center text-slate-900 p-4 bg-cover bg-center h-screen"
+      style={{
+        backgroundImage:
+          'url("https://cdn.pixabay.com/photo/2020/08/31/20/26/zen-5533537_640.jpg")',
+      }}
+    >
+      <h1 className="text-4xl font-bold mt-6 mb-6">Welcome to YogaShala</h1>
+      <div>
+        <h1 className="text-2xl font-bold mb-6">Our Schedule</h1>
+        <ul className="flex flex-wrap gap-10 p-4 mx-auto justify-center">
+          {events.map((event) => (
+            <li key={event.id}>
+              <EventCard
+                eventname={event.eventName}
+                description={event.eventDescription}
+                schedule={event.eventSchedule}
+                location={event.eventLocation}
+                imageLink={event.eventImageLink}
+                registrationLink={event.eventRegistrationLink}
+                id={event.id}
+              />
+            </li>
+          ))}
+        </ul>
       </div>
-      <div></div>
     </div>
   );
 }

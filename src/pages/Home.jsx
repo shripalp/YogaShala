@@ -2,7 +2,7 @@
 //import Events from "../components/Events";
 import EventForm from "../components/EventsForm";
 import HeroSection from "../components/HeroSection";
-import Navbar from "../components/Navbar";
+
 import { getAuth } from "firebase/auth";
 import { useEffect, useState } from "react";
 const Home = () => {
@@ -23,9 +23,6 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <header>
-        <Navbar />
-      </header>
       <section id="hero">
         <HeroSection />
       </section>

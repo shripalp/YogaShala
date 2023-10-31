@@ -111,7 +111,7 @@ function Authentication() {
                 Login
               </button>{" "}
               <button
-                className="w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
+                className="invisible w-1/8 bg-blue-500 text-white rounded-lg py-2 font-medium hover:bg-blue-600 p-4 m-4"
                 onClick={handleRegistration}
               >
                 Register
@@ -127,7 +127,7 @@ function Authentication() {
           user logged in successfully!
         </div>
       ) : (
-        <div className="text-xl">login if already registered or register</div>
+        ""
       )}
     </div>
   );
