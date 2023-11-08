@@ -52,6 +52,7 @@ const Nav = () => {
             <Dropdown.Item href="/admin">login</Dropdown.Item>
           )}
         </Dropdown>
+        <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
         <Navbar.Link href="/" active>
