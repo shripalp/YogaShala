@@ -1,7 +1,11 @@
 //import flowbitePlugin from "flowbite/plugin";
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,ts,jsx,tsx}", "./index.html"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./index.html",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -11,5 +15,5 @@ export default {
     },
   },
   // eslint-disable-next-line no-undef
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

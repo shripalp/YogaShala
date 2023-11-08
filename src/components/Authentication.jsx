@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   getAuth,
@@ -15,6 +16,7 @@ function Authentication() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const auth = getAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -50,6 +52,7 @@ function Authentication() {
 
       setEmail("");
       setPassword("");
+      navigate("/");
     } catch (error) {
       console.error("Login failed:", error);
       setError(error.message);
@@ -63,6 +66,7 @@ function Authentication() {
 
       setEmail("");
       setPassword("");
+      navigate("/");
     } catch (error) {
       console.error("Logout failed:", error);
       setError(error.message);
