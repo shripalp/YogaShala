@@ -46,6 +46,7 @@ const Nav = () => {
           <Dropdown.Header>
             <span className="block text-sm">Admin Only</span>
           </Dropdown.Header>
+          <Dropdown.Item href="/admin">admin</Dropdown.Item>
           {user ? (
             <Dropdown.Item href="/admin">logout</Dropdown.Item>
           ) : (
