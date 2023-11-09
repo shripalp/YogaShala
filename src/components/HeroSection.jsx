@@ -35,6 +35,7 @@ function HeroSection() {
       }}
     >
       <h1 className="text-4xl font-bold mt-6 mb-6">Welcome to YogaShala</h1>
+
       <div>
         <h1 className="text-2xl font-bold mb-6">Our Schedule</h1>
         <ul className="flex flex-wrap gap-10 p-4 mx-auto justify-center">

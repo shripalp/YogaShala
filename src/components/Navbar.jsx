@@ -2,6 +2,7 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import { getAuth } from "firebase/auth";
 import { useEffect, useState } from "react";
+import ToggleModal from "./ToggleModal";
 
 const Nav = () => {
   const [user, setUser] = useState(null);
@@ -31,7 +32,9 @@ const Nav = () => {
           YogaShala
         </span>
       </Navbar.Brand>
+
       <div className="flex md:order-2">
+        <ToggleModal />
         <Dropdown
           arrowIcon={false}
           inline
@@ -53,6 +56,7 @@ const Nav = () => {
             <Dropdown.Item href="/admin">login</Dropdown.Item>
           )}
         </Dropdown>
+
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
