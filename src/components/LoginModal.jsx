@@ -8,7 +8,7 @@ import {
   signOut,
 } from "firebase/auth";
 
-const ToggleModal = () => {
+const LoginModal = () => {
   const [openModal, setOpenModal] = useState(false);
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
@@ -148,4 +148,4 @@ const ToggleModal = () => {
   );
 };
 
-export default ToggleModal;
+export default LoginModal;
