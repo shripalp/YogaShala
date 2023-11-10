@@ -1,4 +1,4 @@
-import Authentication from "../components/Authentication";
+//import Authentication from "../components/Authentication";
 import { getAuth } from "firebase/auth";
 import { useEffect, useState } from "react";
 import EventForm from "../components/EventsForm";
@@ -20,10 +20,8 @@ const Admin = () => {
     return () => unsubscribe(); // Unsubscribe from the listener when the component unmounts.
   }, []);
   return (
-    <div>
-      <section id="auth">
-        <Authentication />
-      </section>
+    <div className="w-full mx-auto">
+      <h1 className="font-2xl">Admin Page</h1>
       <section id="eventform">{user ? <EventForm /> : ""}</section>
     </div>
   );

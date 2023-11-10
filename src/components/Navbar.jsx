@@ -35,27 +35,6 @@ const Nav = () => {
 
       <div className="flex md:order-2">
         <ToggleModal />
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label={
-            <Avatar
-              alt="User settings"
-              img="https://cdn.pixabay.com/photo/2013/07/13/13/38/man-161282_1280.png"
-              rounded
-            />
-          }
-        >
-          <Dropdown.Header>
-            <span className="block text-sm">Admin Only</span>
-          </Dropdown.Header>
-          <Dropdown.Item href="/admin">admin</Dropdown.Item>
-          {user ? (
-            <Dropdown.Item href="/admin">logout</Dropdown.Item>
-          ) : (
-            <Dropdown.Item href="/admin">login</Dropdown.Item>
-          )}
-        </Dropdown>
 
         <Navbar.Toggle />
       </div>
@@ -65,6 +44,7 @@ const Nav = () => {
         </Navbar.Link>
         <Navbar.Link href="/about">About</Navbar.Link>
         <Navbar.Link href="/contact">Contact</Navbar.Link>
+        <Navbar.Link href="/admin">Admin</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
