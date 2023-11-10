@@ -28,7 +28,7 @@ function HeroSection() {
 
   return (
     <div
-      className="text-center text-slate-900 p-4 bg-cover bg-center h-screen"
+      className="text-center text-slate-900 p-4 bg-repeat"
       style={{
         backgroundImage:
           'url("https://cdn.pixabay.com/photo/2020/08/31/20/26/zen-5533537_640.jpg")',
