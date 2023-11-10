@@ -5,7 +5,7 @@ import LoginModal from "./LoginModal";
 
 const Nav = () => {
   return (
-    <Navbar className="bg-blue-200 h-16" fluid rounded>
+    <Navbar className="h-16 bg-amber-600" fluid rounded>
       <Navbar.Brand href="/">
         <img
           src="https://cdn.pixabay.com/photo/2018/04/12/04/39/om-3312546_1280.png"

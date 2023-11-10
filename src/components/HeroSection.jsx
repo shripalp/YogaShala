@@ -28,10 +28,10 @@ function HeroSection() {
 
   return (
     <div
-      className="text-center text-slate-900 p-4 bg-repeat"
+      className="text-center text-black p-4 bg-cover bg-repeat"
       style={{
         backgroundImage:
-          'url("https://cdn.pixabay.com/photo/2020/08/31/20/26/zen-5533537_640.jpg")',
+          'url("https://cdn.pixabay.com/photo/2018/09/12/07/17/background-image-3671385_1280.jpg")',
       }}
     >
       <h1 className="text-4xl font-bold mt-6 mb-6">Welcome to YogaShala</h1>
