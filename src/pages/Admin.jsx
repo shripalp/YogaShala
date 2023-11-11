@@ -20,8 +20,8 @@ const Admin = () => {
     return () => unsubscribe(); // Unsubscribe from the listener when the component unmounts.
   }, []);
   return (
-    <div className="text-3xl">
-      <h1 className="font-2xl">Admin Page</h1>
+    <div className="flex justify-center items-center">
+      <h1 className="text-3xl font-bold">Admin Page</h1>
       <section id="eventform">{user ? <EventForm /> : ""}</section>
     </div>
   );

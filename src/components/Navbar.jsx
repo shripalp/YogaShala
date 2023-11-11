@@ -24,12 +24,18 @@ const Nav = () => {
       </div>
 
       <Navbar.Collapse>
-        <Navbar.Link href="/" active>
+        <Navbar.Link className="text-xl text-slate-200" href="/" active>
           Home
         </Navbar.Link>
-        <Navbar.Link href="/about">About</Navbar.Link>
-        <Navbar.Link href="/contact">Contact</Navbar.Link>
-        <Navbar.Link href="/admin">Admin</Navbar.Link>
+        <Navbar.Link className="text-xl text-slate-200" href="/about">
+          About
+        </Navbar.Link>
+        <Navbar.Link className="text-xl text-slate-200" href="/contact">
+          Contact
+        </Navbar.Link>
+        <Navbar.Link className="text-xl text-slate-200" href="/admin">
+          Admin
+        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
