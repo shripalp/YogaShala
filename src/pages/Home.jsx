@@ -5,7 +5,7 @@ import HeroSection from "../components/HeroSection";
 
 const Home = () => {
   return (
-    <div className="text-center text-black p-4">
+    <div className="flex text-center text-black p-4">
       <section id="hero">
         <HeroSection />
       </section>
