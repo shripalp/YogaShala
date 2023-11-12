@@ -10,7 +10,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Navbar";
 function App() {
   return (
-    <div className="w-full mx-auto">
+    <div
+      className="w-full mx-auto bg-cover bg-repeat min-h-screen"
+      style={{
+        backgroundImage:
+          'url("https://cdn.pixabay.com/photo/2018/09/12/07/17/background-image-3671385_1280.jpg")',
+      }}
+    >
       <header>
         <Nav />
       </header>

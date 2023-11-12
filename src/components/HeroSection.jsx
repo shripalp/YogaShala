@@ -27,13 +27,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <div
-      className="text-center text-black p-4 bg-cover bg-repeat min-h-screen"
-      style={{
-        backgroundImage:
-          'url("https://cdn.pixabay.com/photo/2018/09/12/07/17/background-image-3671385_1280.jpg")',
-      }}
-    >
+    <div>
       <h1 className="text-4xl font-bold mt-6 mb-6">Welcome to YogaShala</h1>
 
       <div>
