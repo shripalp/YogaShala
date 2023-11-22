@@ -13,7 +13,7 @@ const Nav = () => {
           alt="YogaShala Logo"
         />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          YogaShala
+          Anubhav YogaShala
         </span>
       </Navbar.Brand>
 
