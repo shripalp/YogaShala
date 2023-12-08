@@ -22,7 +22,7 @@ const Home = () => {
     return () => unsubscribe(); // Unsubscribe from the listener when the component unmounts.
   }, []);
   return (
-    <div className="flex flex-col text-center text-black p-4">
+    <div className="flex text-center text-black p-4">
       <section id="hero">
         <HeroSection />
       </section>
