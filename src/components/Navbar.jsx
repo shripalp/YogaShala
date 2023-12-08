@@ -27,15 +27,6 @@ const Nav = () => {
         <Navbar.Link className="text-xl text-slate-200" href="/" active>
           Home
         </Navbar.Link>
-        <Navbar.Link className="text-xl text-slate-200" href="/about">
-          About
-        </Navbar.Link>
-        <Navbar.Link className="text-xl text-slate-200" href="/contact">
-          Contact
-        </Navbar.Link>
-        <Navbar.Link className="text-xl text-slate-200" href="/admin">
-          Admin
-        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
