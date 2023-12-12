@@ -1,17 +1,14 @@
 //import React from "react";
 import { Navbar } from "flowbite-react";
+import logo from "../assets/anubhavyogashala_logo.png";
 
 import LoginModal from "./LoginModal";
 
 const Nav = () => {
   return (
-    <Navbar className="h-16 bg-amber-600" fluid rounded>
+    <Navbar className="bg-amber-600 h-18" fluid rounded>
       <Navbar.Brand href="/">
-        <img
-          src="https://cdn.pixabay.com/photo/2018/04/12/04/39/om-3312546_1280.png"
-          className="mr-3 h-8 sm:h-9"
-          alt="YogaShala Logo"
-        />
+        <img src={logo} className="mr-3 h-auto sm:h-9" alt="YogaShala Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
           Anubhav YogaShala
         </span>
